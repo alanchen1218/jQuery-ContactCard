@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> jQuery: Contact Card </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		// var firstName = $('#firstName').val();
+				// //var lastName = $('#lastName').val();
+				// // var description = $('#description').val()
+
+				// $('.submitForm').submit();
+				// var html = (firstName);
+				// $('.first').append(html);
+				// console.log(html);
+				// return false;
+		$(document).ready(function(){
+			
+			$('.btn').click(function(){
+				$('.namehere').append($('#firstName').val());
+				$('.namehere').append($('#lastName').val());
+				$('.descriptionhere').append($('#description').val());
+				$('.descriptionhere').hide();
+			});
+			$(document).on('click', '.first', function(){
+				$('.descriptionhere').show();
+				$('.namehere').hide();
+			});
+
+			$('.btn').click(function(){
+				$('.namehere1').append($('#firstName').val());
+				$('.namehere1').append($('#lastName').val());
+				$('.descriptionhere1').append($('#description').val());
+				$('.descriptionhere1').hide();
+			});
+			$(document).on('click', '.second', function(){
+				$('.descriptionhere1').show();
+				$('.namehere1').hide();
+			});
+
+			$('.btn').click(function(){
+				$('.namehere2').append($('#firstName').val());
+				$('.namehere2').append($('#lastName').val());
+				$('.descriptionhere2').append($('#description').val());
+				$('.descriptionhere2').hide();
+			});
+			$(document).on('click', '.third', function(){
+				$('.descriptionhere2').show();
+				$('.namehere2').hide();
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<form class="submitForm" action='process.php' method='post'>
+		<p>First Name:</p> <input type="text" name="firstName" id="firstName">
+		<p>Last Name:</p> <input type="text" name="lastName"  id="lastName">
+		<p class="description">Description:</p>
+		<p><textarea name="description" rows ="7" cols="30" id="description"></textarea></p>
+		
+	</form>
+		<p><button class="btn"> Add User</button></p>
+		
+	<div class="first">
+		<h2 class="namehere"></h2>
+		<p class="descriptionhere"></p>
+	</div>
+	
+	<div class="second">
+		<h2 class="namehere1"></h2>
+		<p class="descriptionhere1"></p>
+	</div>
+
+	<div class="third">
+		<h2 class="namehere2"></h2>
+		<p class="descriptionhere2"></p>
+	</div>
+</body>
+</html>

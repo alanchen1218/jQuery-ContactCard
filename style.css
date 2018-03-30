@@ -1,0 +1,24 @@
+*{
+ margin: 0px;
+ padding: 0px;
+}
+.submitForm{
+	border: 3px solid black;
+	height: 300px;
+	width: 300px;
+	padding-top: 5px;
+	display: inline-block;
+}
+p{
+	display: inline-block;
+	margin: 10px;
+}
+.first,
+.second,
+.third{
+	border: 3px solid black;
+	height: 230px;
+	width: 300px;
+	display: inline-block;
+	vertical-align: top;
+}
